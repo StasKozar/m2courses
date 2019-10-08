@@ -214,6 +214,8 @@ class View extends \Magento\Framework\App\Helper\AbstractHelper
             $pageConfig->addBodyClass('categorypath-' . $this->categoryUrlPathGenerator->getUrlPath($currentCategory))
                 ->addBodyClass('category-' . $currentCategory->getUrlKey());
         }
+        print_r($resultPage->getLayout()->getUpdate()->asSimplexml());
+        die();
 
         return $this;
     }
