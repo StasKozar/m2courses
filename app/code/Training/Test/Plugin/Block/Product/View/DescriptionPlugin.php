@@ -10,6 +10,6 @@ class DescriptionPlugin
 {
     public function beforeToHtml(Description $subject)
     {
-        return $subject->getProduct()->setDescription('Test description');
+        return $subject->setTemplate('Training_Test::description.phtml');
     }
 }
