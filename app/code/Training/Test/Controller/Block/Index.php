@@ -6,6 +6,7 @@ namespace Training\Test\Controller\Block;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\View\LayoutFactory;
 use Training\Test\Block\Test;
 
@@ -34,6 +35,7 @@ class Index extends Action
     {
         $layout = $this->layoutFactory->create();
         $block = $layout->createBlock(Test::class);
-        $this->getResponse()->appendBody($block->toHtml());
+
+        return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($block->toHtml());
     }
 }
