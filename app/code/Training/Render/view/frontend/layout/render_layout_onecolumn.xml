@@ -3,4 +3,7 @@
     <head>
         <title>Onecolumn Layout</title>
     </head>
+    <body>
+        <referenceBlock name="testargument" remove="true"/>
+    </body>
 </page>
