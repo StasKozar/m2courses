@@ -1,0 +1,12 @@
+<?php
+/** @var Magento\Framework\View\Element\Template $block */
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Training_Js/js/layout-debug": {
+                "xml": <?= json_encode($block->getLayout()->getXmlString()) ?>
+            }
+        }
+    }
+</script>
