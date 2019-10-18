@@ -1,0 +1,10 @@
+<div class="product-stock-qty" data-bind="blockLoader: isLoading">
+    <!-- ko if: resultBlockVisibility() -->
+        <div class="product-stock-qty">
+            <p data-bind="text: stockQty()"/>
+        </div>
+    <!-- /ko -->
+    <div class="action">
+        <button type="button" data-bind="i18n: 'Show available qty', click: showQty"></button>
+    </div>
+</div>

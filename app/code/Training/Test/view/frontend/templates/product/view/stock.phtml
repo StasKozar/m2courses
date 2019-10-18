@@ -1,0 +1,24 @@
+<?php
+/** @var \Training\Test\Block\Product\Stock $block */
+?>
+<div data-bind="scope: 'stockQty'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "stockQty": {
+                        "component": "Training_Test/js/stockQty",
+                        "config": {
+                            "template": "Training_Test/stockQty",
+                            "url": <?= json_encode($block->getUrl('training/product/stock')) ?>,
+                            "productId": <?= json_encode($block->getProductId()) ?>
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
