@@ -56,7 +56,7 @@ class FeedbackList extends \Magento\Framework\View\Element\Template
 
     public function getAddFeedbackUrl()
     {
-        return $this->getUrl('training_feedback/index/form');
+        return $this->getUrl('feedback/index/form');
     }
 
     public function getFeedbackDate($feedback)

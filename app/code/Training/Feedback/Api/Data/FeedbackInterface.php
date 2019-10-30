@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Training\Feedback\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
-use Training\Feedback\Api\Data\FeedbackExtensionInterface;
 
 interface FeedbackInterface extends ExtensibleDataInterface
 {
@@ -126,13 +125,13 @@ interface FeedbackInterface extends ExtensibleDataInterface
     /**
      * Retrieve existing extension attributes object.
      *
-     * @return FeedbackExtensionInterface|null
+     * @return \Training\Feedback\Api\Data\FeedbackExtensionInterface|null
      */
     public function getExtensionAttributes();
     /**
      * Set an extension attributes object.
      *
-     * @param FeedbackExtensionInterface $extensionAttributes
+     * @param \Training\Feedback\Api\Data\FeedbackExtensionInterface $extensionAttributes
      * @return $this
      */
     public function setExtensionAttributes(FeedbackExtensionInterface $extensionAttributes);
