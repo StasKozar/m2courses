@@ -9,6 +9,9 @@ use Training\Feedback\Model\ResourceModel\Feedback as FeedbackResource;
 
 class Collection extends AbstractCollection
 {
+    protected $_eventPrefix = 'training_feedback_collection';
+    protected $_eventObject = 'feedback_collection';
+
     protected function _construct()
     {
         $this->_init(
